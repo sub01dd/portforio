@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>みんご | 動画編集ポートフォリオ</title>
+  <meta name="description" content="みんご の動画編集ポートフォリオ。ぬいぐるみVlog・京都Vlogを中心に、TikTok・YouTubeで活動中。動画編集のご依頼受付中。">
+  <meta property="og:title" content="みんご | 動画編集ポートフォリオ">
+  <meta property="og:description" content="ぬいぐるみVlog・京都Vlogを中心に活動する動画編集者。TikTok・YouTube運営中。お仕事受付中。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <!-- og:image / twitter:image: Canvaなどで作成した 1200×630px の画像URLを設定してください -->
+  <!-- <meta property="og:image" content="https://yourdomain.com/og-image.png"> -->
+  <!-- <meta name="twitter:image" content="https://yourdomain.com/og-image.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mingo_douga">
+  <meta name="theme-color" content="#F8F3EE">
+  <!-- Inline SVG favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🐄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader__bar"></div>
+    <span class="loader__count" id="loaderCount">0</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <button class="nav__toggle" id="navToggle" aria-label="メニューを開く">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+    </button>
+  </header>
+
+  <!-- Overlay Navigation -->
+  <div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="ナビゲーションメニュー" aria-hidden="true">
+    <nav class="nav-overlay__inner">
+      <ul class="nav-overlay__list">
+        <li><a href="#works"   class="nav-overlay__link" data-num="01">WORKS</a></li>
+        <li><a href="#about"   class="nav-overlay__link" data-num="02">ABOUT</a></li>
+        <li><a href="#skills"  class="nav-overlay__link" data-num="03">SKILLS</a></li>
+        <li><a href="#contact" class="nav-overlay__link" data-num="04">CONTACT</a></li>
+      </ul>
+      <div class="nav-overlay__footer">
+        <a href="https://x.com/mingo_douga" target="_blank" rel="noopener">X (Twitter)</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero__content">
+        <span class="hero__eyebrow fade-up">Video Editor &amp; Vlogger</span>
+        <h1 class="hero__name fade-up" id="heroHeading">みんご</h1>
+        <p class="hero__tagline fade-up">
+          雰囲気を大切に、<br>あなたの世界観を<br class="sp-only">動画で表現します。
+        </p>
+        <a href="#works" class="hero__btn fade-up">
+          <span>作品を見る</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero__deco" aria-hidden="true">
+        <div class="hero__ring hero__ring--1"></div>
+        <div class="hero__ring hero__ring--2"></div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ─── WORKS ─── -->
+    <section class="works" id="works" aria-labelledby="worksHeading">
+      <div class="section-head reveal">
+        <span class="section-label">制作実績</span>
+        <h2 class="section-title" id="worksHeading">WORKS</h2>
+      </div>
+
+      <div class="works__list">
+
+        <article class="work-item reveal">
+          <div class="work-item__media">
+            <div class="work-item__thumb" style="--thumb-bg:#EAE0D8;">
+              <div class="work-item__overlay">
+                <button class="play-btn" aria-label="動画を再生">
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" aria-hidden="true">
+                    <path d="M1 1l16 10L1 21V1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <img src="https://placehold.co/800x600/EAE0D8/7A6D65?text=Work+01" alt="ぬいぐるみVlog サムネイル" loading="lazy">
+            </div>
+          </div>
+          <div class="work-item__body">
+            <span class="work-tag">ぬいぐるみVlog · TikTok</span>
+            <h3 class="work-title">ソフシさんと過ごす日常</h3>
+            <p class="work-meta">縦型動画 · 2024</p>
+            <p class="work-desc">ぬいぐるみを主役にした日常のひとコマ。温かみのある色調と、ゆったりとしたテンポで編集しました。</p>
+            <a href="#" class="work-link">動画を見る →</a>
+          </div>
+        </article>
+
+        <article class="work-item work-item--flip reveal">
+          <div class="work-item__media">
+            <div class="work-item__thumb" style="--thumb-bg:#D8E0E8;">
+              <div class="work-item__overlay">
+                <button class="play-btn" aria-label="動画を再生">
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" aria-hidden="true">
+                    <path d="M1 1l16 10L1 21V1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <img src="https://placehold.co/800x600/D8E0E8/5A6870?text=Work+02" alt="京都Vlog サムネイル" loading="lazy">
+            </div>
+          </div>
+          <div class="work-item__body">
+            <span class="work-tag">京都Vlog · YouTube</span>
+            <h3 class="work-title">京都の朝さんぽ</h3>
+            <p class="work-meta">横型動画 · 2024</p>
+            <p class="work-desc">京都の静かな朝を切り取ったVlog。BGMの選曲と色補正にこだわり、旅の雰囲気を大切に仕上げました。</p>
+            <a href="#" class="work-link">動画を見る →</a>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-item__media">
+            <div class="work-item__thumb" style="--thumb-bg:#E8E0D8;">
+              <div class="work-item__overlay">
+                <button class="play-btn" aria-label="動画を再生">
+                  <svg width="18" height="22" viewBox="0 0 18 22" fill="none" aria-hidden="true">
+                    <path d="M1 1l16 10L1 21V1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+              <img src="https://placehold.co/800x600/E8E0D8/7A6D65?text=Work+03" alt="カフェVlog サムネイル" loading="lazy">
+            </div>
+          </div>
+          <div class="work-item__body">
+            <span class="work-tag">カフェVlog · Shorts</span>
+            <h3 class="work-title">カフェめぐり in 京都</h3>
+            <p class="work-meta">縦型・横型対応 · 2024</p>
+            <p class="work-desc">テンポよく、でもどこか落ち着いた雰囲気のショート動画。カットとテロップのタイミングにこだわりました。</p>
+            <a href="#" class="work-link">動画を見る →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about" aria-labelledby="aboutHeading">
+      <div class="about__inner">
+        <div class="about__text">
+          <div class="section-head reveal">
+            <span class="section-label">プロフィール</span>
+            <h2 class="section-title" id="aboutHeading">ABOUT</h2>
+          </div>
+          <p class="about__body reveal">
+            はじめまして、みんごです。<br><br>
+            ぬいぐるみVlogや京都Vlogをメインに、TikTokとYouTubeで動画を投稿しています。
+            使用ツールはVLLOとCanva。スマホで編集しながら、少しずつ自分の世界観を育てています。<br><br>
+            「見た人が思わず笑顔になれる動画」を目標に、日々制作中です。
+            現在、動画編集のお仕事のご依頼を受け付けています。お気軽にご相談ください。
+          </p>
+          <div class="about__stats reveal">
+            <div class="stat">
+              <span class="stat__num">100<small>+</small></span>
+              <span class="stat__label">YouTube 登録者</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">800<small>+</small></span>
+              <span class="stat__label">TikTok フォロワー</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual reveal">
+          <div class="about__avatar-wrap">
+            <div class="about__avatar">🐄</div>
+          </div>
+          <div class="about__badge">
+            <span class="badge-dot"></span>
+            <span>お仕事受付中</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section class="skills" id="skills" aria-labelledby="skillsHeading">
+      <div class="section-head reveal">
+        <span class="section-label">使用ツール・スキル</span>
+        <h2 class="section-title" id="skillsHeading">SKILLS</h2>
+      </div>
+      <ul class="skills__grid" role="list">
+        <li class="skill-card reveal">
+          <span class="skill-name">VLLO</span>
+          <span class="skill-desc">動画編集（メイン）</span>
+        </li>
+        <li class="skill-card reveal">
+          <span class="skill-name">Canva</span>
+          <span class="skill-desc">サムネイル・デザイン制作</span>
+        </li>
+        <li class="skill-card reveal">
+          <span class="skill-name">TikTok 運営</span>
+          <span class="skill-desc">縦型・ショート動画</span>
+        </li>
+        <li class="skill-card reveal">
+          <span class="skill-name">YouTube 運営</span>
+          <span class="skill-desc">横型動画・Shorts</span>
+        </li>
+        <li class="skill-card reveal">
+          <span class="skill-name">Vlog 編集</span>
+          <span class="skill-desc">日常・旅行動画の制作</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section class="contact" id="contact" aria-labelledby="contactHeading">
+      <div class="contact__inner">
+        <div class="section-head reveal">
+          <span class="section-label">お仕事のご依頼・ご相談</span>
+          <h2 class="section-title" id="contactHeading">CONTACT</h2>
+        </div>
+        <p class="contact__lead reveal">お気軽にご連絡ください。</p>
+        <a class="contact__email reveal" href="mailto:rento.1008100@gmail.com">
+          rento.1008100@gmail.com
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__links">
+        <a href="https://x.com/mingo_douga" target="_blank" rel="noopener">X</a>
+      </div>
+      <small class="footer__copy" id="footerCopy">© みんご. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Custom cursor dot -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
