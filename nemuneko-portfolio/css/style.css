@@ -170,7 +170,7 @@ button { cursor: pointer; background: none; border: none; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
-  padding: 0 1rem;
+  padding: 0 10rem;
 }
 
 .work-card__link {
