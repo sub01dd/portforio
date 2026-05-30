@@ -156,6 +156,39 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
 
 .foot{padding:2rem;text-align:center;font-family:var(--f-cormorant);font-style:italic;letter-spacing:.2em;color:var(--c-mute);font-size:.78rem;border-top:1px solid var(--c-line)}
 
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width:760px){
+  .bar{padding:.85rem 1.1rem}
+  .brand{font-size:1.1rem;letter-spacing:.24em}
+  .brand small{font-size:.5rem;letter-spacing:.4em}
+  .back{font-size:.75rem;letter-spacing:.16em}
+  main{padding:3.4rem 1.2rem 2.4rem}
+  h1{font-size:clamp(1.5rem,5vw,2rem);letter-spacing:.14em;line-height:1.6}
+  .lede{font-size:.9rem;line-height:2.1}
+  .eyebrow{font-size:.78rem;letter-spacing:.26em;gap:.7rem}
+  .eyebrow .num{font-size:1.1rem}
+  .eyebrow .bar{width:30px;background:var(--c-gold)}
+  .intro-wrap{padding-bottom:2.2rem;margin-bottom:2.6rem}
+  .field label{font-size:.74rem;letter-spacing:.18em}
+  .field .ja{font-size:.74rem;margin-left:.6rem}
+  input,select,textarea{padding:.85rem .2rem;font-size:.92rem}
+  textarea{min-height:120px}
+  .chip{min-width:0;padding:.7rem .5rem;font-size:.78rem;letter-spacing:.14em}
+  .submit{width:100%;text-align:center;justify-content:center;padding:1rem 1.4rem;font-size:.88rem;letter-spacing:.26em;display:flex}
+  .toast__card{padding:2.2rem 1.6rem}
+  .toast__title{font-size:1.3rem;letter-spacing:.14em}
+  .toast__body{font-size:.85rem}
+}
+@media (max-width:480px){
+  main{padding:2.8rem 1rem 2.2rem}
+  h1{font-size:1.4rem;letter-spacing:.12em}
+  .field label{font-size:.7rem}
+  .chips{gap:.5rem}
+  .chip{flex:1 1 0;padding:.65rem .4rem;font-size:.72rem}
+}
+
 .toast{
   display:none;position:fixed;inset:0;z-index:60;
   background:rgba(42,40,38,.55);backdrop-filter:blur(8px);
@@ -193,8 +226,8 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
   <div class="intro-wrap">
     <span class="intro-wrap__tate">あなたのための、刻 (とき) を</span>
     <p class="eyebrow"><span class="num">07</span><span class="bar"></span>Contact &amp; Reservation</p>
-    <h1>あなたのお時間を、<br>お聞かせください。</h1>
-    <p class="lede">ご予約のご相談、無料カウンセリングのお申込み、気になることなど ─ こちらのフォームより、どうぞお気軽に。翌営業日までに、ご返信を差し上げます。</p>
+    <h1>ご相談を、<br>お聞かせください。</h1>
+    <p class="lede">ご予約・無料カウンセリングのお申込み・メニューのご質問など、<br>こちらのフォームより、どうぞお気軽に。<br>翌営業日までにご返信いたします。</p>
   </div>
 
   <div class="toast" id="toast" role="dialog" aria-modal="true" aria-labelledby="toastTitle">
@@ -234,9 +267,9 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
       <select name="menu">
         <option value="">― お選びください ―</option>
         <option>無料カウンセリングのみ</option>
-        <option>Hair Removal ─ 脱毛</option>
-        <option>Lumière ─ 光フェイシャル・ボディ</option>
-        <option>Clarté ─ セルフホワイトニング</option>
+        <option>Facial Care ─ フェイシャル</option>
+        <option>Body Care ─ ボディ</option>
+        <option>Hair Removal Care ─ 脱毛</option>
         <option>その他・ご相談</option>
       </select>
     </div>
@@ -262,16 +295,16 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
   </form>
 
   <div class="alt">
-    <a href="https://lin.ee/2mMka8J" target="_blank" rel="noopener">
-      <span class="k">LINE</span><span>公式アカウントで予約</span>
+    <a href="https://lin.ee/jr5cKD4" target="_blank" rel="noopener">
+      <span class="k">LINE</span><span>公式アカウントで予約・ご相談</span>
     </a>
-    <a href="tel:0587502408">
-      <span class="k">Tel</span><span>0587 — 50 — 2408</span>
+    <a href="https://www.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E4%B8%B8%E3%81%AE%E5%86%851-6-37" target="_blank" rel="noopener">
+      <span class="k">Map</span><span>名古屋市中区丸の内 1-6-37 METRO GARDEN 401</span>
     </a>
   </div>
 </main>
 
-<footer class="foot">© 2026 lotus zee — Beauty, in stillness.</footer>
+<footer class="foot">© 2024 LOTUS ZEE — A sanctuary to love yourself the most.</footer>
 
 <script>
 const form = document.getElementById('form');
