@@ -339,10 +339,13 @@ section{position:relative;z-index:2}
 .intro-band__cell p{
   font-size:.98rem;line-height:1.95;color:var(--c-text);letter-spacing:.06em;
 }
-@media (max-width:760px){
+@media (max-width:900px){
   .intro-band__grid{grid-template-columns:1fr}
-  .intro-band__cell{border-left:0;border-top:1px solid var(--c-line);padding:2.4rem 1.4rem}
+  .intro-band__cell{border-left:0;border-top:1px solid var(--c-line)}
   .intro-band__cell:first-child{border-top:0}
+}
+@media (max-width:760px){
+  .intro-band__cell{padding:2.4rem 1.4rem}
 }
 
 /* ============================================
@@ -1054,9 +1057,10 @@ section{position:relative;z-index:2}
 .hero__title,.hero__sub,
 .h2,.lede,
 .concept__body p,
-.menu__body .desc,.menu__note,
+.menu__body h3,.menu__body .desc,.menu__note,
 .voice__card .text,
-.flow__step p,
+.intro-band__cell h3,.intro-band__cell p,
+.flow__step h4,.flow__step p,
 .cta__title,.cta__sub,
 .foot p{
   text-wrap:pretty;
@@ -1106,7 +1110,7 @@ section{position:relative;z-index:2}
   <div class="hero__tate">名古屋・丸の内 完全プライベート</div>
   <div class="hero__inner">
     <p class="hero__eyebrow">A sanctuary to love yourself the most</p>
-    <h1 class="hero__title">ワタシを、<br>一番大切に出来る時間。</h1>
+    <h1 class="hero__title">ワタシを、<br class="br-pc"><br class="br-sp">一番大切に<br class="br-sp">出来る時間。</h1>
     <p class="hero__sub">名古屋・丸の内の隠れ家サロン。<br class="br-pc">完全プライベートな空間で、肌と心をやさしく整えます。</p>
     <div class="hero__badges">
       <span><i></i>完全プライベート</span>
@@ -1161,7 +1165,7 @@ section{position:relative;z-index:2}
     </div>
     <div class="reveal reveal--slower">
       <p class="eyebrow"><span class="num">01</span><span class="bar"></span>Welcome</p>
-      <h2 class="h2">あなただけの<em>プライベート</em>、<br>名古屋・丸の内に。</h2>
+      <h2 class="h2">あなただけの<em>プライベート</em>、<br class="br-pc"><br class="br-sp">名古屋・丸の内に。</h2>
       <div class="concept__body lede">
         <p>美しさだけでなく、その先にある<br class="br-pc">心安らぐ時間まで、お届けしたい。</p>
         <p>手技・オイル・機器をすべて選び抜き、<br class="br-pc">8 年以上、全国のお客様にご愛顧いただいてまいりました。</p>
@@ -1177,7 +1181,7 @@ section{position:relative;z-index:2}
   <div class="wrap">
     <div class="menu__intro reveal">
       <p class="eyebrow"><span class="num">02</span><span class="bar"></span>Menu</p>
-      <h2 class="h2">整える、ほどく、慈 (いつく) しむ。<br>三つの<em>シグネチャー</em>。</h2>
+      <h2 class="h2">整える、ほどく、慈 (いつく) しむ。<br class="br-pc"><br class="br-sp">三つの<em>シグネチャー</em>。</h2>
       <p class="lede" style="margin-left:auto;margin-right:auto;text-align:center">フェイシャル・ボディ・脱毛。<br class="br-pc">あなたのお悩みに、ひとつずつ寄り添うメニューをご用意しています。</p>
     </div>
 
@@ -1343,7 +1347,7 @@ section{position:relative;z-index:2}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <p class="eyebrow" style="justify-content:center"><span class="num">04</span><span class="bar"></span>Voice</p>
-      <h2 class="h2">通うたびに、<br><em>整ってゆく</em>。</h2>
+      <h2 class="h2">通うたびに、<br class="br-pc"><br class="br-sp"><em>整ってゆく</em>。</h2>
     </div>
     <div class="voice__grid">
       <div class="voice__card reveal">
@@ -1371,7 +1375,7 @@ section{position:relative;z-index:2}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <p class="eyebrow" style="justify-content:center"><span class="num">05</span><span class="bar"></span>Your Visit</p>
-      <h2 class="h2">はじめての方も、<br>どうぞご安心を。</h2>
+      <h2 class="h2">はじめての方も、<br class="br-pc"><br class="br-sp">どうぞご安心を。</h2>
       <p class="lede" style="margin:0 auto">完全予約制。お時間に余裕をもって、お越しくださいませ。</p>
     </div>
     <div class="flow__list">
@@ -1404,7 +1408,7 @@ section{position:relative;z-index:2}
   <div class="wrap">
     <div style="text-align:center" class="reveal">
       <p class="eyebrow" style="justify-content:center"><span class="num">06</span><span class="bar"></span>Access</p>
-      <h2 class="h2">あなたを<em>待つ</em>、<br>静かな扉。</h2>
+      <h2 class="h2">あなたを<em>待つ</em>、<br class="br-pc"><br class="br-sp">静かな扉。</h2>
     </div>
     <div class="access__grid">
       <div class="access__info reveal">
@@ -1440,7 +1444,7 @@ section{position:relative;z-index:2}
   <div class="cta__tate2">慈 — 自分を愛おしむ</div>
   <div class="cta__inner reveal">
     <p class="eyebrow" style="justify-content:center;color:var(--c-gold-soft)"><span class="bar" style="background:var(--c-gold-soft)"></span>Reservation<span class="bar" style="background:var(--c-gold-soft)"></span></p>
-    <h2 class="cta__title">あなただけの時間を、<br>お取り置きいたします。</h2>
+    <h2 class="cta__title">あなただけの時間を、<br class="br-pc"><br class="br-sp">お取り置きいたします。</h2>
     <p class="cta__sub">LINE 公式アカウントより、ご希望日を 3 候補ほどお伝えください。<br class="br-pc">メニューのご相談だけでも、どうぞお気軽に。</p>
     <div class="cta__primary">
       <a href="https://lin.ee/jr5cKD4" class="btn btn--solid btn--lg" target="_blank" rel="noopener">
