@@ -1040,6 +1040,33 @@ section{position:relative;z-index:2}
 }
 
 /* ============================================
+   Line-break utilities — keep designed breaks on PC,
+   let text reflow naturally on phones (≤760px)
+   ============================================ */
+.br-pc{display:inline}
+.br-sp{display:none}
+@media (max-width:760px){
+  .br-pc{display:none}
+  .br-sp{display:inline}
+}
+/* CJK-aware natural wrapping where supported.
+   Unknown values are ignored by older engines, so this is purely additive. */
+.hero__title,.hero__sub,
+.h2,.lede,
+.concept__body p,
+.menu__body .desc,.menu__note,
+.voice__card .text,
+.flow__step p,
+.cta__title,.cta__sub,
+.foot p{
+  text-wrap:pretty;
+  word-break:auto-phrase;
+  line-break:strict;
+}
+/* Larger display headings benefit from balance instead of pretty */
+.hero__title,.h2,.cta__title{text-wrap:balance}
+
+/* ============================================
    Print / Reduced motion
    ============================================ */
 @media (prefers-reduced-motion: reduce){
@@ -1080,7 +1107,7 @@ section{position:relative;z-index:2}
   <div class="hero__inner">
     <p class="hero__eyebrow">A sanctuary to love yourself the most</p>
     <h1 class="hero__title">ワタシを、<br>一番大切に出来る時間。</h1>
-    <p class="hero__sub">名古屋・丸の内の隠れ家サロン。<br>完全プライベートな空間で、肌と心をやさしく整えます。</p>
+    <p class="hero__sub">名古屋・丸の内の隠れ家サロン。<br class="br-pc">完全プライベートな空間で、肌と心をやさしく整えます。</p>
     <div class="hero__badges">
       <span><i></i>完全プライベート</span>
       <span><i></i>8 年以上の実績</span>
@@ -1105,7 +1132,7 @@ section{position:relative;z-index:2}
         <path d="M24 14 L24 40" stroke-dasharray="1 2"/>
       </svg>
       <h3>髪のボリュームが気になる</h3>
-      <p>頭皮からそっと整え、<br>ハリと艶のある髪へ。</p>
+      <p>頭皮からそっと整え、<br class="br-pc">ハリと艶のある髪へ。</p>
     </div>
     <div class="intro-band__cell reveal reveal--slower">
       <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
@@ -1114,14 +1141,14 @@ section{position:relative;z-index:2}
         <path d="M24 4 L24 10 M24 38 L24 44 M4 24 L10 24 M38 24 L44 24"/>
       </svg>
       <h3>ツルツル肌になりたい</h3>
-      <p>厳選した手技と機器で、<br>触れたくなるなめらかな肌へ。</p>
+      <p>厳選した手技と機器で、<br class="br-pc">触れたくなるなめらかな肌へ。</p>
     </div>
     <div class="intro-band__cell reveal reveal--slowest">
       <svg class="icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
         <path d="M24 38 C14 30, 8 22, 12 14 C16 8, 22 10, 24 16 C26 10, 32 8, 36 14 C40 22, 34 30, 24 38 Z"/>
       </svg>
       <h3>疲れがたまっている</h3>
-      <p>心と体のこわばりをほどき、<br>軽やかな自分を取り戻す。</p>
+      <p>心と体のこわばりをほどき、<br class="br-pc">軽やかな自分を取り戻す。</p>
     </div>
   </div>
 </section>
@@ -1136,9 +1163,9 @@ section{position:relative;z-index:2}
       <p class="eyebrow"><span class="num">01</span><span class="bar"></span>Welcome</p>
       <h2 class="h2">あなただけの<em>プライベート</em>、<br>名古屋・丸の内に。</h2>
       <div class="concept__body lede">
-        <p>美しさだけでなく、その先にある<br>心安らぐ時間まで、お届けしたい。</p>
-        <p>手技・オイル・機器をすべて選び抜き、<br>8 年以上、全国のお客様にご愛顧いただいてまいりました。</p>
-        <p>どんな小さなお悩みも、<br>どうぞお気軽にご相談ください。</p>
+        <p>美しさだけでなく、その先にある<br class="br-pc">心安らぐ時間まで、お届けしたい。</p>
+        <p>手技・オイル・機器をすべて選び抜き、<br class="br-pc">8 年以上、全国のお客様にご愛顧いただいてまいりました。</p>
+        <p>どんな小さなお悩みも、<br class="br-pc">どうぞお気軽にご相談ください。</p>
       </div>
       <p class="concept__sign">A sanctuary to love yourself the most.</p>
     </div>
@@ -1151,7 +1178,7 @@ section{position:relative;z-index:2}
     <div class="menu__intro reveal">
       <p class="eyebrow"><span class="num">02</span><span class="bar"></span>Menu</p>
       <h2 class="h2">整える、ほどく、慈 (いつく) しむ。<br>三つの<em>シグネチャー</em>。</h2>
-      <p class="lede" style="margin-left:auto;margin-right:auto;text-align:center">フェイシャル・ボディ・脱毛。<br>あなたのお悩みに、ひとつずつ寄り添うメニューをご用意しています。</p>
+      <p class="lede" style="margin-left:auto;margin-right:auto;text-align:center">フェイシャル・ボディ・脱毛。<br class="br-pc">あなたのお悩みに、ひとつずつ寄り添うメニューをご用意しています。</p>
     </div>
 
     <div class="menu__list">
@@ -1279,7 +1306,7 @@ section{position:relative;z-index:2}
       <div class="reveal">
         <p class="eyebrow"><span class="num">03</span><span class="bar"></span>Our Commitment</p>
         <h2 class="h2">触れるもの、<br>すべてに<em>こだわる</em>。</h2>
-        <p class="lede">長く愛されるサロンであるために、わたしたちはお肌に触れるものを一つひとつ吟味しています。<br>8 年以上、全国のお客様に選ばれてきた理由を、ぜひ実感してください。</p>
+        <p class="lede">長く愛されるサロンであるために、わたしたちはお肌に触れるものを一つひとつ吟味しています。<br class="br-pc">8 年以上、全国のお客様に選ばれてきた理由を、ぜひ実感してください。</p>
       </div>
       <div class="cosmetic__items reveal reveal--slower">
         <div class="cosmetic__card">
@@ -1350,23 +1377,23 @@ section{position:relative;z-index:2}
     <div class="flow__list">
       <div class="flow__step reveal">
         <h4>ご来店</h4>
-        <p>香りとお茶で<br>お迎えいたします。</p>
+        <p>香りとお茶で<br class="br-pc">お迎えいたします。</p>
       </div>
       <div class="flow__step reveal reveal--slower">
         <h4>カウンセリング</h4>
-        <p>お悩みをじっくり<br>お伺いします。</p>
+        <p>お悩みをじっくり<br class="br-pc">お伺いします。</p>
       </div>
       <div class="flow__step reveal reveal--slowest">
         <h4>施術</h4>
-        <p>あなたに合わせた<br>ケアをお届けします。</p>
+        <p>あなたに合わせた<br class="br-pc">ケアをお届けします。</p>
       </div>
       <div class="flow__step reveal" style="transition-delay:.55s">
         <h4>アフターケア</h4>
-        <p>余韻のうちに、<br>肌を整えます。</p>
+        <p>余韻のうちに、<br class="br-pc">肌を整えます。</p>
       </div>
       <div class="flow__step reveal" style="transition-delay:.7s">
         <h4>お見送り</h4>
-        <p>またお会いできる日を、<br>お待ちしています。</p>
+        <p>またお会いできる日を、<br class="br-pc">お待ちしています。</p>
       </div>
     </div>
   </div>
@@ -1381,7 +1408,7 @@ section{position:relative;z-index:2}
     </div>
     <div class="access__grid">
       <div class="access__info reveal">
-        <p class="lede">名古屋市中区丸の内。<br>地下鉄「丸の内」駅から徒歩圏内、<br>METRO GARDEN の一室にひそやかに灯る隠れ家サロン。<br>遠方からのご来店もお待ちしています。</p>
+        <p class="lede">名古屋市中区丸の内。<br class="br-pc">地下鉄「丸の内」駅から徒歩圏内、<br class="br-pc">METRO GARDEN の一室にひそやかに灯る隠れ家サロン。<br class="br-pc">遠方からのご来店もお待ちしています。</p>
         <p class="access__status" id="status">
           <span class="status__dot"></span>
           <span class="status__text">— 営業状況を確認中 —</span>
@@ -1414,7 +1441,7 @@ section{position:relative;z-index:2}
   <div class="cta__inner reveal">
     <p class="eyebrow" style="justify-content:center;color:var(--c-gold-soft)"><span class="bar" style="background:var(--c-gold-soft)"></span>Reservation<span class="bar" style="background:var(--c-gold-soft)"></span></p>
     <h2 class="cta__title">あなただけの時間を、<br>お取り置きいたします。</h2>
-    <p class="cta__sub">LINE 公式アカウントより、ご希望日を 3 候補ほどお伝えください。<br>メニューのご相談だけでも、どうぞお気軽に。</p>
+    <p class="cta__sub">LINE 公式アカウントより、ご希望日を 3 候補ほどお伝えください。<br class="br-pc">メニューのご相談だけでも、どうぞお気軽に。</p>
     <div class="cta__primary">
       <a href="https://lin.ee/jr5cKD4" class="btn btn--solid btn--lg" target="_blank" rel="noopener">
         <span class="dot"></span>LINEでご予約・ご相談
@@ -1432,7 +1459,7 @@ section{position:relative;z-index:2}
   <div class="foot__top">
     <div>
       <p class="foot__brand">lotus zee<small>ロータスジー</small></p>
-      <p style="margin-top:1.2rem;color:var(--c-text)">ワタシを、一番大切に出来る時間。<br>名古屋・丸の内の隠れ家サロン。</p>
+      <p style="margin-top:1.2rem;color:var(--c-text)">ワタシを、一番大切に出来る時間。<br class="br-pc">名古屋・丸の内の隠れ家サロン。</p>
     </div>
     <div>
       <h5>Menu</h5>

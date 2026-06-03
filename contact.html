@@ -214,6 +214,20 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
   transition:background .4s,color .4s;
 }
 .toast__close:hover{background:var(--c-sumi);color:#fff}
+
+/* Line-break utilities — keep designed breaks on PC, reflow on phones */
+.br-pc{display:inline}
+.br-sp{display:none}
+@media (max-width:760px){
+  .br-pc{display:none}
+  .br-sp{display:inline}
+}
+h1,.lede,.toast__body{
+  text-wrap:pretty;
+  word-break:auto-phrase;
+  line-break:strict;
+}
+h1{text-wrap:balance}
 </style>
 </head>
 <body>
@@ -227,14 +241,14 @@ textarea{min-height:140px;resize:vertical;line-height:1.9}
     <span class="intro-wrap__tate">あなたのための、刻 (とき) を</span>
     <p class="eyebrow"><span class="num">07</span><span class="bar"></span>Contact &amp; Reservation</p>
     <h1>ご相談を、<br>お聞かせください。</h1>
-    <p class="lede">ご予約・無料カウンセリングのお申込み・メニューのご質問など、<br>こちらのフォームより、どうぞお気軽に。<br>翌営業日までにご返信いたします。</p>
+    <p class="lede">ご予約・無料カウンセリングのお申込み・メニューのご質問など、<br class="br-pc">こちらのフォームより、どうぞお気軽に。<br class="br-pc">翌営業日までにご返信いたします。</p>
   </div>
 
   <div class="toast" id="toast" role="dialog" aria-modal="true" aria-labelledby="toastTitle">
     <div class="toast__card">
       <p class="toast__eye">— Reservation Received</p>
       <h2 class="toast__title" id="toastTitle">承りました。</h2>
-      <p class="toast__body">ご送信ありがとうございました。<br>翌営業日までに、心を込めてご返信を差し上げます。</p>
+      <p class="toast__body">ご送信ありがとうございました。<br class="br-pc">翌営業日までに、心を込めてご返信を差し上げます。</p>
       <button class="toast__close" type="button" id="toastClose">Close — 閉じる</button>
     </div>
   </div>
